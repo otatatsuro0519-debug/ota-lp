@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>soena. | 2027年4月 オープン予定 | 骨格補正ヘアサロン</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Old+Mincho:wght@400;700&family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --ink: #1a1814;
+  --ink-soft: #3d3a35;
+  --smoke: #f5f2ec;
+  --paper: #fdfbf8;
+  --gold: #b89a6a;
+  --gold-light: #d4b98a;
+  --rust: #8b4513;
+  --muted: #9a9590;
+  --border: #e2ddd5;
+}
+
+body {
+  font-family: 'Shippori Mincho', 'Hiragino Mincho ProN', serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.9;
+  overflow-x: hidden;
+}
+
+/* FLOATING CTA */
+.float-cta {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+}
+
+.float-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #06C755;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 20px rgba(6,199,85,0.35);
+  transition: transform 0.2s;
+}
+
+.float-line:hover { transform: translateY(-2px); }
+.float-line svg { width: 18px; height: 18px; fill: #fff; }
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  padding: 20px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(253,251,248,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226,221,213,0.6);
+}
+
+.header-logo {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.header-logo span {
+  font-size: 11px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  color: var(--muted);
+  display: block;
+  margin-top: 2px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-nav a {
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  color: var(--muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover { color: var(--ink); }
+
+.header-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 10px 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.header-line:hover { background: var(--gold); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  background: var(--smoke);
+}
+
+.hero-left {
+  padding: 80px 64px 80px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.hero-tag-line { width: 32px; height: 1px; background: var(--gold); }
+
+.hero-tag-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.hero-problem {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.9;
+}
+
+.hero-problem strong { color: var(--rust); font-weight: 500; }
+
+.hero-catch {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 700;
+  line-height: 1.55;
+  color: var(--ink);
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+
+.hero-catch em {
+  font-style: normal;
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold-light);
+  padding-bottom: 2px;
+}
+
+.hero-sub {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 2;
+  margin-bottom: 48px;
+  max-width: 420px;
+}
+
+.hero-open {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.hero-open-badge {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  padding: 8px 16px;
+}
+
+.hero-open-date {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+}
+
+.hero-stats { display: flex; gap: 32px; }
+
+.hero-stat-num {
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--ink);
+}
+
+.hero-stat-num sup { font-size: 13px; }
+.hero-stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+.hero-right { position: relative; overflow: hidden; }
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 40px;
+  background: linear-gradient(to top, rgba(26,24,20,0.8), transparent);
+}
+
+.hero-overlay p {
+  font-size: 12px;
+  color: rgba(253,251,248,0.85);
+  letter-spacing: 0.15em;
+  line-height: 2;
+}
+
+/* SECTION COMMON */
+.section { padding: 120px 80px; }
+
+.sec-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.sec-line { width: 28px; height: 1px; background: var(--gold); }
+
+.sec-lt {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.45em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.sec-title {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 24px;
+  letter-spacing: 0.04em;
+}
+
+.sec-title em { font-style: normal; color: var(--gold); }
+.sec-lead { font-size: 14px; color: var(--ink-soft); line-height: 2.2; max-width: 600px; }
+
+/* AFFINITY */
+.affinity {
+  background: var(--ink);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.affinity-img {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.affinity-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.75) saturate(0.8);
+}
+
+.affinity-content {
+  padding: 100px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.affinity-content .sec-title { color: var(--paper); font-size: clamp(22px, 2.5vw, 34px); }
+
+.aff-quote {
+  border-left: 2px solid var(--gold);
+  padding: 20px 28px;
+  background: rgba(184,154,106,0.08);
+  margin: 20px 0;
+}
+
+.aff-quote p { font-size: 15px; color: var(--paper); line-height: 2; }
+
+.aff-quote cite {
+  display: block;
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--gold-light);
+  font-style: normal;
+  letter-spacing: 0.1em;
+}
+
+.aff-body { font-size: 14px; color: rgba(253,251,248,0.68); line-height: 2.3; }
+.aff-body strong { color: var(--gold-light); font-weight: 500; }
+
+/* BA */
+.ba { background: var(--smoke); padding: 100px 48px; }
+.ba-header { padding: 0 32px; margin-bottom: 60px; }
+
+.ba-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.ba-item {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.ba-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.ba-item:hover img { transform: scale(1.04); }
+
+.ba-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 14px 16px;
+  background: linear-gradient(to top, rgba(26,24,20,0.75), transparent);
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: rgba(253,251,248,0.85);
+  text-transform: uppercase;
+}
+
+/* SOLUTION */
+.solution-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 80px;
+  align-items: end;
+}
+
+.method {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 40px;
+  border-top: 1px solid var(--border);
+  padding: 48px 0;
+  align-items: start;
+}
+
+.method:last-child { border-bottom: 1px solid var(--border); }
+
+.method-num {
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  padding-top: 4px;
+}
+
+.method-tag {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.method-title {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.method-body { font-size: 13px; color: var(--ink-soft); line-height: 2.1; }
+.method-body strong { color: var(--rust); font-weight: 500; }
+
+/* OFFER */
+.offer { background: var(--ink); padding: 120px 80px; }
+.offer .sec-title { color: var(--paper); }
+
+.offer-lead {
+  font-size: 14px;
+  color: rgba(253,251,248,0.65);
+  line-height: 2.2;
+  max-width: 560px;
+  margin-bottom: 64px;
+}
+
+.offer-lead strong { color: var(--gold-light); font-weight: 500; }
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-bottom: 64px;
+}
+
+.offer-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(184,154,106,0.2);
+  padding: 52px 44px;
+  position: relative;
+}
+
+.offer-card.feat {
+  background: rgba(184,154,106,0.08);
+  border-color: var(--gold);
+}
+
+.offer-badge {
+  position: absolute;
+  top: -1px; right: 28px;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: 'Lato', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  padding: 6px 14px;
+}
+
+.offer-card-lbl {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.offer-card-name { font-size: 16px; color: var(--paper); line-height: 1.7; margin-bottom: 32px; }
+
+.offer-price {
+  font-family: 'Lato', sans-serif;
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.offer-price sup { font-size: 16px; vertical-align: top; margin-top: 8px; display: inline-block; }
+.offer-time { font-family: 'Lato', sans-serif; font-size: 12px; color: rgba(253,251,248,0.4); margin-top: 10px; }
+
+.offer-promise {
+  border-top: 1px solid rgba(184,154,106,0.2);
+  padding-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.promise-icon {
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.promise-title {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--paper);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.promise-body { font-size: 13px; color: rgba(253,251,248,0.6); line-height: 2; }
+
+/* NARROWING */
+.narrowing-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.narrowing-img { overflow: hidden; }
+
+.narrowing-img img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top;
+}
+
+.narrowing-limit {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--rust);
+  color: var(--paper);
+  padding: 12px 24px;
+  margin-bottom: 28px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.narrowing-limit strong {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.narrowing-body { font-size: 14px; color: var(--ink-soft); line-height: 2.3; margin-bottom: 32px; }
+.narrowing-body strong { color: var(--ink); font-weight: 600; }
+
+.n-list { list-style: none; margin-bottom: 40px; }
+
+.n-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+
+.n-list li::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.btn-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #06C755;
+  color: #fff;
+  padding: 18px 40px;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(6,199,85,0.3);
+}
+
+/* FLOW */
+.flow { background: var(--smoke); padding: 120px 80px; }
+
+.flow-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin: 64px 0 3px;
+}
+
+.flow-step { background: var(--paper); padding: 40px 28px; }
+
+.flow-step-num {
+  font-family: 'Lato', sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--border);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.flow-step-name { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
+.flow-step-desc { font-size: 12px; color: var(--muted); line-height: 1.9; }
+
+.flow-img-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+
+.flow-img-row img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  filter: brightness(0.88);
+}
+
+/* VOICE */
+.voice { background: var(--paper); }
+
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 64px;
+}
+
+.voice-card {
+  background: var(--smoke);
+  padding: 36px 32px;
+  border-top: 3px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.voice-card:hover { border-color: var(--gold); }
+
+.voice-stars { display: flex; gap: 3px; margin-bottom: 16px; }
+.voice-stars span { color: var(--gold); font-size: 13px; }
+.voice-text { font-size: 13px; color: var(--ink-soft); line-height: 2.1; margin-bottom: 20px; }
+.voice-author { font-family: 'Lato', sans-serif; font-size: 11px; letter-spacing: 0.15em; color: var(--muted); }
+.voice-source { text-align: center; margin-top: 40px; font-size: 12px; color: var(--muted); }
+
+/* PROFILE */
+.profile { background: var(--ink); display: grid; grid-template-columns: 1fr 1fr; }
+
+.profile-content {
+  padding: 100px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-name {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--paper);
+  margin-bottom: 6px;
+  letter-spacing: 0.08em;
+}
+
+.profile-role {
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.p-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-bottom: 40px; }
+
+.p-stat { background: rgba(255,255,255,0.04); padding: 22px 24px; }
+
+.p-stat-num {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.p-stat-num sup { font-size: 13px; }
+.p-stat-lbl { font-size: 11px; color: rgba(253,251,248,0.5); margin-top: 5px; }
+
+.profile-story { font-size: 13px; color: rgba(253,251,248,0.68); line-height: 2.3; margin-bottom: 28px; }
+.profile-story strong { color: var(--gold-light); font-weight: 500; }
+
+.profile-quote {
+  border-left: 2px solid var(--gold);
+  padding: 18px 24px;
+  background: rgba(184,154,106,0.06);
+}
+
+.profile-quote p { font-size: 13px; color: var(--paper); line-height: 2; }
+
+.profile-quote cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--gold);
+  font-style: normal;
+  letter-spacing: 0.1em;
+}
+
+.profile-img { position: relative; overflow: hidden; min-height: 600px; }
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: brightness(0.85) saturate(0.9);
+}
+
+/* GUARANTEE */
+.guarantee { background: var(--smoke); padding: 100px 80px; text-align: center; }
+
+.guarantee-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  padding: 80px 64px;
+  background: var(--paper);
+  position: relative;
+}
+
+.guarantee-inner::before {
+  content: 'GUARANTEE';
+  position: absolute;
+  top: -11px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--paper);
+  padding: 0 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.5em;
+  color: var(--gold);
+}
+
+.guarantee-num {
+  font-family: 'Lato', sans-serif;
+  font-size: 90px;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.guarantee-num span { font-size: 28px; color: var(--gold); }
+.guarantee-title { font-size: 14px; letter-spacing: 0.25em; color: var(--muted); margin: 16px 0 28px; }
+.guarantee-body { font-size: 13px; color: var(--ink-soft); line-height: 2.3; }
+
+/* STORY */
+.story { background: var(--ink); padding: 120px 80px; text-align: center; }
+
+.story-title {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 700;
+  color: var(--paper);
+  line-height: 1.5;
+  margin-bottom: 40px;
+  letter-spacing: 0.06em;
+}
+
+.story-title em { font-style: normal; color: var(--gold); }
+
+.story-body {
+  font-size: 14px;
+  color: rgba(253,251,248,0.68);
+  line-height: 2.5;
+  max-width: 620px;
+  margin: 0 auto 64px;
+}
+
+.story-logo {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--paper);
+  letter-spacing: 0.2em;
+  opacity: 0.12;
+}
+
+.story-yomi {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5em;
+  color: rgba(253,251,248,0.3);
+  text-transform: uppercase;
+}
+
+/* ACTION */
+.action { background: var(--paper); padding: 120px 80px; text-align: center; }
+
+.action-catch {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+.action-sub { font-size: 14px; color: var(--muted); line-height: 2; margin-bottom: 16px; }
+
+.action-honest {
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-style: italic;
+  line-height: 1.9;
+  margin-bottom: 48px;
+  padding: 24px 32px;
+  background: var(--smoke);
+  display: inline-block;
+  border-left: 3px solid var(--gold);
+  text-align: left;
+  max-width: 560px;
+}
+
+.action-btns { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 48px; }
+
+.action-btn-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: #06C755;
+  color: #fff;
+  padding: 20px 52px;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(6,199,85,0.3);
+  transition: transform 0.2s;
+}
+
+.action-btn-line:hover { transform: translateY(-2px); }
+.action-btn-line svg { width: 22px; height: 22px; fill: #fff; }
+.action-note { font-family: 'Lato', sans-serif; font-size: 11px; color: var(--muted); letter-spacing: 0.1em; }
+
+.action-open { margin-top: 48px; padding-top: 48px; border-top: 1px solid var(--border); }
+.action-open-date { font-family: 'Lato', sans-serif; font-size: 13px; letter-spacing: 0.4em; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; }
+.action-open-text { font-family: 'Zen Old Mincho', serif; font-size: 22px; font-weight: 700; color: var(--ink); letter-spacing: 0.1em; }
+
+/* SNS */
+.sns { background: var(--smoke); padding: 80px; text-align: center; }
+
+.sns-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.sns-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+.sns-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sns-btn:hover { background: var(--ink); color: var(--paper); }
+.sns-btn.lb { background: #06C755; color: #fff; border-color: #06C755; }
+.sns-btn.lb:hover { background: #05b34c; }
+
+/* FOOTER */
+footer {
+  background: var(--ink);
+  padding: 48px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-logo {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--paper);
+  letter-spacing: 0.15em;
+}
+
+.footer-logo span {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.footer-copy { font-family: 'Lato', sans-serif; font-size: 10px; letter-spacing: 0.15em; color: rgba(255,255,255,0.25); }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .section { padding: 80px 40px; }
+  header { padding: 16px 32px; }
+  .header-nav { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 60px 40px; }
+  .hero-right { height: 70vw; }
+  .affinity { grid-template-columns: 1fr; }
+  .affinity-img { min-height: 50vw; }
+  .affinity-content { padding: 60px 40px; }
+  .solution-intro { grid-template-columns: 1fr; gap: 40px; }
+  .method { grid-template-columns: 60px 1fr; gap: 24px; }
+  .offer-grid { grid-template-columns: 1fr; }
+  .offer-promise { grid-template-columns: 1fr; }
+  .narrowing-inner { grid-template-columns: 1fr; }
+  .flow-steps { grid-template-columns: repeat(2, 1fr); }
+  .flow-img-row { grid-template-columns: repeat(2, 1fr); }
+  .voice-grid { grid-template-columns: 1fr; }
+  .profile { grid-template-columns: 1fr; }
+  .profile-img { min-height: 50vw; order: -1; }
+  .profile-content { padding: 60px 40px; }
+  .ba-grid { grid-template-columns: repeat(2, 1fr); }
+  footer { flex-direction: column; gap: 20px; text-align: center; padding: 40px; }
+  .sns { padding: 60px 40px; }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 60px 24px; }
+  header { padding: 14px 24px; }
+  .hero-left { padding: 40px 24px; }
+  .hero-stats { gap: 16px; flex-wrap: wrap; }
+  .ba-grid { grid-template-columns: 1fr; }
+  .profile-stats { grid-template-columns: 1fr; }
+  .guarantee-inner { padding: 40px 24px; }
+  .action { padding: 60px 24px; }
+  footer { padding: 32px 24px; }
+  .offer { padding: 60px 24px; }
+  .story { padding: 60px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- FLOATING CTA -->
+<div class="float-cta">
+  <a href="https://lin.ee/U4rtTaZ" class="float-line" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.02 2 11c0 2.95 1.46 5.57 3.74 7.28L5 21l2.98-1.56C9.22 19.8 10.58 20 12 20c5.52 0 10-4.02 10-9S17.52 2 12 2z"/></svg>
+    先行予約・お悩み相談
+  </a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="header-logo">
+    soena.
+    <span>Opening April 2027</span>
+  </a>
+  <nav class="header-nav">
+    <a href="#problem">お悩み</a>
+    <a href="#solution">技術</a>
+    <a href="#menu">メニュー</a>
+    <a href="#profile">プロフィール</a>
+    <a href="https://lin.ee/U4rtTaZ" class="header-line" target="_blank" rel="noopener">LINE 先行予約</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section style="min-height:100vh;padding-top:80px;display:grid;grid-template-columns:55% 45%;background:var(--smoke);" id="problem">
+  <div class="hero-left">
+    <div class="hero-tag">
+      <div class="hero-tag-line"></div>
+      <span class="hero-tag-text">35歳以上の働く女性へ</span>
+    </div>
+    <p class="hero-problem">
+      写真を見るたびに「<strong>なんか疲れて見える</strong>」。<br>
+      美容室には通っているのに、なぜかすっきりしない、あの感覚。
+    </p>
+    <h1 class="hero-catch">
+      朝3分で決まる髪が、<br><em>2ヶ月の自信</em>になる。
+    </h1>
+    <p class="hero-sub">
+      骨格から設計する「再現できるヘア」で、毎朝の鏡が楽しみになる。<br>
+      乾かすだけで決まる、あなただけの一生もの技術を。
+    </p>
+    <div class="hero-open">
+      <span class="hero-open-badge">OPEN</span>
+      <span class="hero-open-date">2027 . 04 . 11</span>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">★5.0</div>
+        <div class="hero-stat-label">Google口コミ（193件）</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">80.9<sup>%</sup></div>
+        <div class="hero-stat-label">リピート率</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">15,000<sup>+</sup></div>
+        <div class="hero-stat-label">累計担当人数</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="ヒーロー-.webp" alt="施術後の笑顔">
+    <div class="hero-overlay">
+      <p>「なんか若くなった？」そう言われる変化が、ここから始まります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- AFFINITY -->
+<section class="affinity" id="affinity">
+  <div class="affinity-img">
+    <img src="センス4.webp" alt="カウンセリング">
+  </div>
+  <div class="affinity-content">
+    <div class="sec-label"><div class="sec-line"></div><span class="sec-lt">Affinity</span></div>
+    <h2 class="sec-title">「また違った」に<br>なりたくなかった。</h2>
+    <div class="aff-quote">
+      <p>「期待して裏切られるのが、もう怖かった。<br>変えたい気持ちはあるのに、踏み出せない。」</p>
+      <cite>— 初来店のお客様から、よく聞く言葉</cite>
+    </div>
+    <p class="aff-body">
+      実は、私自身が「<strong>髪を切ることが嫌いな学生</strong>」でした。<br><br>
+      硬くて広がりやすい髪なのに、毎回ベリーショートにされてしまい、「明日学校行くのやだな」と思っていた少年でした。<br><br>
+      <strong>「あの時の自分が出会いたかった美容師になりたい」</strong>——それが、私がこの仕事をする原点です。<br>soena. は、そんな想いから生まれたサロンです。
+    </p>
+  </div>
+</section>
+
+<!-- B/A -->
+<section class="ba" id="ba">
+  <div class="ba-header">
+    <div class="sec-label"><div class="sec-line"></div><span class="sec-lt">Before / After</span></div>
+    <h2 class="sec-title">「形」が変わると、<em>印象が変わる。</em></h2>
+    <p class="sec-lead">骨格・髪質・ライフスタイルを踏まえた設計の実例。すべて太田達朗による施術です。</p>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-item"><img src="case1.webp" alt="Before After 1"><div class="ba-label">Case 01</div></div>
+    <div class="ba-item"><img src="case2.webp" alt="Before After 2"><div class="ba-label">Case 02</div></div>
+    <div class="ba-item"><img src="case3.webp" alt="Before After 3"><div class="ba-label">Case 03</div></div>
+    <div class="ba-item"><img src="case4.webp" alt="Before After 4"><div class="ba-label">Case 04</div></div>
+    <div class="ba-item"><img src="case5.webp" alt="Before After 5"><div class="ba-label">Case 05</div></div>
+    <div class="ba-item"><img src="センス1.webp" alt="Style 1"><div class="ba-label">Case 06</div></div>
+    <div class="ba-item"><img src="センス2.webp" alt="Style 2"><div class="ba-label">Case 07</div></div>
+    <div class="ba-item"><img src="センス3.webp" alt="Style 3"><div class="ba-label">Case 08</div></div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="section" style="background:var(--paper);" id="solution">
+  <div class="solution-intro">
+    <div>
+      <div class="sec-label"><div class="sec-line"></div><span class="sec-lt">Solution</span></div>
+      <h2 class="sec-title">「感覚」で切らないから、<br><em>崩れない。</em></h2>
+    </div>
+    <p class="sec-lead">多くのサロンで「なんとなく解決されなかった」悩みに、理由があります。それは、あなたの骨格・髪質・生活習慣に合わせた「設計」がなかったから。soena.では3つの理論で根拠のある変化をご提供します。</p>
+  </div>
+  <div class="method">
+    <div class="method-num">METHOD 01</div>
+    <div>
+      <p class="method-tag">Skeleton Design</p>
+      <h3 class="method-title">骨格補正理論——1cmの印象操作</h3>
+      <p class="method-body">トップの高さが1cm違うだけで、人は若々しくも疲れて見えもする。後頭部の丸みの位置が少し変わるだけで、横顔の印象が激変する。soena.では<strong>「骨格補正理論」</strong>をもとに、顔まわり・横顔・後頭部のシルエットまでミリ単位で設計します。感覚ではなく、理論で切るから再現できる。</p>
+    </div>
+  </div>
+  <div class="method">
+    <div class="method-num">METHOD 02</div>
+    <div>
+      <p class="method-tag">No Brush Declaration</p>
+      <h3 class="method-title">ノブロー宣言——ブラシは使いません</h3>
+      <p class="method-body">私はブラシを一切使いません。ブローありきの仕上がりは、お客様が家で再現できないから。乾かすだけで形になるように骨格・髪質・毛流れに合わせて設計するのが私の仕事です。<strong>朝3分の余裕が、毎日続きます。</strong></p>
+    </div>
+  </div>
+  <div class="method">
+    <div class="method-num">METHOD 03</div>
+    <div>
+      <p class="method-tag">Impression Color</p>
+      <h3 class="method-title">印象操作カラー——肌色を明るく見せる薬剤設計</h3>
+      <p class="method-body">「なんとなく疲れて見える」の原因は<strong>「色」</strong>にあることが多い。肌のトーンに合わせたブラウンを必要量だけ調合し、くすまないオリジナルカラーを設計。「最近顔色いいね」という変化を生みます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer" id="menu">
+  <div class="sec-label"><div class="sec-line"></div><span class="sec-lt">Offer</span></div>
+  <h2 class="sec-title">メニュー・<em>料金</em></h2>
+  <p class="offer-lead">ロング料金なし。すべてセット設計でご提供します。<strong>意味のある価格を、丁寧にご説明します。</strong></p>
+  <div class="offer-grid">
+    <div class="offer-card feat">
+      <div class="offer-badge">Most Popular</div>
+      <p class="offer-card-lbl">Recommended</p>
+      <p class="offer-card-name">骨格設計カット<br>＋ 肌色補正ダメージレスカラー</p>
+      <div class="offer-price"><sup>¥</sup>20,000</div>
+      <p class="offer-time">所要時間 約2時間30分</p>
+    </div>
+    <div class="offer-card">
+      <p class="offer-card-lbl">Premium</p>
+      <p class="offer-card-name">骨格設計カット<br>＋ プレミアム毛髪回復トリートメント</p>
+      <div class="offer-price"><sup>¥</sup>23,000</div>
+      <p class="offer-time">所要時間 約2時間</p>
+    </div>
+  </div>
+  <div class="offer-promise">
+    <div>
+      <p class="promise-icon">Promise 01</p>
+      <h3 class="promise-title">朝のコーヒー1杯分の余裕</h3>
+      <p class="promise-body">乾かすだけで決まる髪が、毎朝のルーティンを変えます。その3分が、1日の自信になります。</p>
+    </div>
+    <div>
+      <p class="promise-icon">Promise 02</p>
+      <h3 class="promise-title">「若くなった？」と言われる変化</h3>
+      <p class="promise-body">周りから「なんか痩せた？」「最近いい感じだね」。その言葉が、自信に変わります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- NARROWING -->
+<section class="section" style="background:var(--smoke);" id="narrowing">
+  <div class="narrowing-inner">
+    <div class="narrowing-img">
+      <img src="センス5.webp" alt="毛髪診断">
+    </div>
+    <div>
+      <div class="sec-label"><div class="sec-line"></div><span class="sec-lt">Narrowing Down</span></div>
+      <h2 class="sec-title">1日<em>3名限定</em>、<br>先行予約を受付中。</h2>
+      <div class="narrowing-limit"><strong>1日3名</strong>のみ ／ 完全予約制</div>
+      <p class="narrowing-body">
+        2027年4月11日、soena.はオープンします。<br>
+        場所はまだ決まっていません。ロゴもまだです。<br><br>
+        それでも、今この文章を読んでくれているあなたに、先に伝えたいことがあります。<br><br>
+        <strong>1人でやるから、あなただけに向き合えます。</strong><br><br>
+        場所が決まっていないのは、あなたに合った空間を妥協せずに選びたいから。
+      </p>
+      <ul class="n-list">
+        <li>完全マンツーマン、完全予約制</li>
+        <li>1日3名限定だから、急かされない時間</li>
+        <li>場所・詳細は先行登録者に優先してご連絡</li>
+        <li>オープン前のお悩み相談は今すぐLINEで</li>
+        <li>先行予約者限定の特典を予定</li>
+      </ul>
+      <a href="https://lin.ee/U4rtTaZ" class="btn-line" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M12 2C6.48 2 2 6.02 2 11c0 2.95 1.46 5.57 3.74 7.28L5 21l2.98-1.56C9.22 19.8 10.58 20 12 20c5.52 0 10-4.02 10-9S17.52 2 12 2z"/></svg>
+        LINEで先行登録する
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow" id="flow">
+  <div class="sec-label"><div class="sec-line"></div><span class="sec-lt">Your Visit</span></div>
+  <h2 class="sec-title">ご来店の<em>流れ</em></h2>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-step-num">01</div>
+      <p class="flow-step-name">ご来店・ご案内</p>
+      <p class="flow-step-desc">笑顔でお出迎え。ロッカーにお荷物をおしまいください。</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-num">02</div>
+      <p class="flow-step-name">毛髪診断・カウンセリング</p>
+      <p class="flow-step-desc">髪質・骨格・悩みを確認しながら、なりたいイメージを一緒に決めます。</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-num">03</div>
+      <p class="flow-step-name">施術</p>
+      <p class="flow-step-desc">ウェットカット→ドライカットで、ミリ単位の質感を確認しながら仕上げます。</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-num">04</div>
+      <p class="flow-step-name">仕上がり確認</p>
+      <p class="flow-step-desc">前後左右、鏡で一緒に確認。翌朝のスタイリング方法もお伝えします。</p>
+    </div>
+  </div>
+  <div class="flow-img-row">
+    <img src="flow1.webp" alt="ご来店">
+    <img src="flow3.webp" alt="カウンセリング">
+    <img src="flow5.webp" alt="施術">
+    <img src="flow8.webp" alt="仕上がり">
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="section" style="background:var(--paper);" id="voice">
+  <div class="sec-label"><div class="sec-line"></div><span class="sec-lt">Customer Voice</span></div>
+  <h2 class="sec-title">お客様の<em>声</em></h2>
+  <p class="sec-lead">現サロン（Gallica両国）でのホットペッパービューティー口コミより</p>
+  <div class="voice-grid">
+    <div class="voice-card">
+      <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="voice-text">骨格カットと似合わせカラーで、マイナス5歳若返った気分です♪ 技術だけでなく、気遣いにも感謝しています。やっぱりお任せして良かったと感じています！</p>
+      <p class="voice-author">みさん ／ 女性・40代・会社員</p>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="voice-text">カットの技術がすごいので、自宅でもただ乾かすだけでそれなりになってしまいます。毎回大満足の仕上がりです。</p>
+      <p class="voice-author">pinchanさん ／ 女性・40代</p>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="voice-text">「大きく変えたくないけれど、今の感じをより良くしたい」という希望を完璧に形にしてくださるので、安心してお任せできます。</p>
+      <p class="voice-author">おにぎりさん ／ 女性・40代・会社員</p>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="voice-text">技術力、提案力、コミュニケーション力、全て揃った担当さんに出会えて嬉しいです。初来店でしたが自分の髪質をお伝えして、ほぼお任せで仕上げていただきました。</p>
+      <p class="voice-author">そらさん ／ 女性・40代・会社員</p>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="voice-text">ショートは無理だと思っていました。それが…ボリュームもでないし、跳ねもしないで纏まったままなのです。本当に嬉しいです。</p>
+      <p class="voice-author">ひろみちゃんさん ／ 女性・50代</p>
+    </div>
+    <div class="voice-card">
+      <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="voice-text">カットだけでこんなに自身の髪の毛が変わるなんて、本当に驚いています。自分の髪の毛も好きになりました。</p>
+      <p class="voice-author">まゆさん ／ 女性・40代・自営業</p>
+    </div>
+  </div>
+  <p class="voice-source" style="text-align:center;margin-top:40px;font-size:12px;color:var(--muted);">※現サロン「Gallica両国」 ホットペッパービューティー口コミ（193件・★5.0）より抜粋</p>
+</section>
+
+<!-- PROFILE -->
+<section class="profile" id="profile">
+  <div class="profile-content">
+    <div class="sec-label"><div class="sec-line"></div><span class="sec-lt">Stylist</span></div>
+    <h2 class="profile-name">太田 達朗</h2>
+    <p class="profile-role">soena. オーナー ／ Hair Stylist</p>
+    <div class="p-stats">
+      <div class="p-stat"><div class="p-stat-num">17<sup>年</sup></div><div class="p-stat-lbl">美容歴</div></div>
+      <div class="p-stat"><div class="p-stat-num">15,000<sup>+</sup></div><div class="p-stat-lbl">累計担当人数</div></div>
+      <div class="p-stat"><div class="p-stat-num">★5.0</div><div class="p-stat-lbl">Google口コミ（193件）</div></div>
+      <div class="p-stat"><div class="p-stat-num">80.9<sup>%</sup></div><div class="p-stat-lbl">リピート率</div></div>
+    </div>
+    <p class="profile-story">美容学校卒業後、都内個人サロンで修行。その後、<strong>美容学校の教員・美容メーカーでの教育サポート</strong>を経て29歳でサロン現場に復帰。4年で社内売上No.1スタイリストに。現在Gallica両国店の店長として月250名以上を担当しながら、2027年4月のsoena.オープンに向けて準備中。</p>
+    <div class="profile-quote">
+      <p>「人の印象は『形』で変わる。小さな改善の積み重ねが、なんとなく今まで解決されてこなかった悩みを変える。私はそう信じています。」</p>
+      <cite>— 太田達朗</cite>
+    </div>
+  </div>
+  <div class="profile-img">
+    <img src="プロフィール.webp" alt="太田達朗">
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee">
+  <div class="guarantee-inner">
+    <div class="guarantee-num">10<span> days</span></div>
+    <p class="guarantee-title">安心の技術保証</p>
+    <p class="guarantee-body">施術日から10日以内であれば、どんな些細なことでも無料でお直しをさせていただきます。ご自宅に帰ってから気になる部分があれば、遠慮なくご連絡ください。それが、私の責任です。</p>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div class="sec-label" style="justify-content:center;">
+    <div class="sec-line"></div><span class="sec-lt">The Name</span><div class="sec-line"></div>
+  </div>
+  <h2 class="story-title">soena.とは、<br>「<em>華を添える</em>」という意味。</h2>
+  <p class="story-body">美容を通じて関わるすべての方の本質的な魅力を引き出し、「あなたの人生に、華を添えられる存在でありたい」——その想いを、この名前に込めました。<br><br>髪が変わるだけで、朝が変わる。朝が変わるだけで、一日が変わる。<br>soena.は、そんな場所でありたいと思っています。</p>
+  <div class="story-logo">soena.</div>
+  <p class="story-yomi">添えな — Soena</p>
+</section>
+
+<!-- ACTION -->
+<section class="action" id="action">
+  <div class="sec-label" style="justify-content:center;margin-bottom:32px;">
+    <div class="sec-line"></div><span class="sec-lt">Action</span><div class="sec-line"></div>
+  </div>
+  <h2 class="action-catch">できないことは、正直に伝えます。<br>まずは、相談から。</h2>
+  <p class="action-sub">2027年4月11日オープン予定。現在は先行予約・お悩み相談を受付中です。</p>
+  <div class="action-honest">
+    「できないことは正直に伝えます。それが私の責任です。まずはお悩みだけ聞かせてください。それだけでも、何かが変わるかもしれません。」<br>
+    <span style="font-size:11px;font-style:normal;letter-spacing:0.1em;color:var(--muted);">— 太田達朗</span>
+  </div>
+  <div class="action-btns">
+    <a href="https://lin.ee/U4rtTaZ" class="action-btn-line" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.02 2 11c0 2.95 1.46 5.57 3.74 7.28L5 21l2.98-1.56C9.22 19.8 10.58 20 12 20c5.52 0 10-4.02 10-9S17.52 2 12 2z"/></svg>
+      LINEで先行予約・お悩み相談
+    </a>
+    <p class="action-note">営業時間内に返信いたします ／ 相談だけでも大歓迎</p>
+  </div>
+  <div class="action-open">
+    <p class="action-open-date">Grand Open</p>
+    <p class="action-open-text">2027年4月11日</p>
+  </div>
+</section>
+
+<!-- SNS -->
+<section class="sns">
+  <p class="sns-title">Follow soena.</p>
+  <div class="sns-links">
+    <a href="https://lin.ee/U4rtTaZ" class="sns-btn lb" target="_blank" rel="noopener">LINE 先行予約・相談</a>
+    <a href="https://www.instagram.com/tatsuro_gram" class="sns-btn" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://note.com/vivid_viola4222" class="sns-btn" target="_blank" rel="noopener">Note</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    soena.
+    <span>Hair Design Studio — Opening 2027.04.11</span>
+  </div>
+  <p class="footer-copy">© 2027 soena. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
