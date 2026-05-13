@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>soena. | 35歳以上の大人女性のための骨格設計専門サロン｜両国</title>
+<meta name="description" content="両国・soena.（ソエナ）。35歳以上の大人女性のための骨格設計＋似合わせ専門サロン。美容師・太田達朗が完全マンツーマン・1日3名限定でお迎えします。乾かすだけで決まる髪へ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --cream:#FAF8F3;
+  --warm:#FDFCFA;
+  --dark:#1C1A17;
+  --charcoal:#2A2825;
+  --muted:#6B6660;
+  --light:#9E9890;
+  --accent:#8B7355;
+  --accent-light:#D4B896;
+  --accent-pale:#F0E8DC;
+  --border:#E8E0D5;
+  --serif:'Noto Serif JP',serif;
+  --roman:'Cormorant Garamond',serif;
+  --sans:'Zen Kaku Gothic New',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--dark);font-family:var(--sans);font-weight:300;line-height:1.9;overflow-x:hidden}
+
+/* ━━ HEADER ━━ */
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(250,248,243,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.logo{font-family:var(--roman);font-size:20px;letter-spacing:.2em;color:var(--dark);font-weight:300;font-style:italic;text-decoration:none}
+.logo span{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.25em;color:var(--muted);font-style:normal;margin-top:2px}
+.header-right{display:flex;gap:12px;align-items:center}
+.header-line{background:#06C755;color:#fff;padding:9px 20px;font-size:11px;letter-spacing:.15em;text-decoration:none;font-family:var(--sans);transition:opacity .3s;white-space:nowrap}
+.header-line:hover{opacity:.85}
+.header-ig{color:var(--charcoal);transition:opacity .3s;display:flex;align-items:center}
+.header-ig:hover{opacity:.6}
+
+/* ━━ HERO ━━ */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:60px}
+.hero-left{position:relative;overflow:hidden;background:var(--charcoal)}
+.hero-left img{width:100%;height:100%;object-fit:cover;opacity:.9;transition:transform 8s ease}
+.hero-left:hover img{transform:scale(1.03)}
+.hero-left::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,var(--cream) 100%)}
+.hero-right{display:flex;flex-direction:column;justify-content:center;padding:80px 60px 80px 70px;background:var(--warm)}
+.hero-badge{font-family:var(--roman);font-size:10px;letter-spacing:.4em;color:var(--accent);margin-bottom:24px;display:block}
+.hero-en{font-family:var(--roman);font-size:clamp(52px,6vw,80px);font-weight:300;font-style:italic;letter-spacing:.05em;line-height:1;color:var(--dark);margin-bottom:8px}
+.hero-ja{font-family:var(--serif);font-weight:200;font-size:11px;letter-spacing:.25em;color:var(--muted);margin-bottom:40px}
+.hero-catch{font-family:var(--serif);font-size:clamp(18px,2vw,24px);font-weight:400;line-height:1.8;color:var(--dark);margin-bottom:16px}
+.hero-catch em{font-style:normal;border-bottom:1px solid var(--accent-light);color:var(--accent)}
+.hero-sub{font-size:13px;color:var(--muted);line-height:2;margin-bottom:40px;max-width:340px}
+.hero-stats{display:flex;gap:24px;padding:20px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:40px}
+.stat-num{font-family:var(--roman);font-size:28px;font-weight:300;color:var(--dark);line-height:1}
+.stat-unit{font-size:10px;color:var(--accent);letter-spacing:.1em}
+.stat-label{font-size:10px;color:var(--muted);letter-spacing:.12em;margin-top:3px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-line{display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;padding:16px 28px;font-family:var(--sans);font-size:12px;letter-spacing:.15em;text-decoration:none;transition:opacity .3s}
+.btn-line:hover{opacity:.85}
+.btn-outline{display:inline-block;border:1px solid var(--accent);color:var(--accent);padding:16px 28px;font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-decoration:none;transition:all .3s}
+.btn-outline:hover{background:var(--accent);color:#fff}
+
+/* ━━ PROBLEM (P) ━━ */
+.problem{background:var(--dark);padding:100px 0}
+.container{max-width:1100px;margin:0 auto;padding:0 40px}
+.section-label{font-family:var(--roman);font-size:10px;letter-spacing:.4em;color:var(--accent);display:block;margin-bottom:14px}
+.section-title{font-family:var(--serif);font-size:clamp(22px,2.8vw,34px);font-weight:400;line-height:1.6;margin-bottom:16px}
+.problem .section-title{color:var(--cream)}
+.problem .section-desc{font-size:14px;color:var(--light);line-height:2;max-width:560px;margin-bottom:56px}
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06)}
+.problem-item{background:var(--dark);padding:36px 28px;position:relative;border-left:2px solid transparent;transition:border-color .3s}
+.problem-item:hover{border-left-color:var(--accent)}
+.problem-num{font-family:var(--roman);font-size:44px;font-weight:300;font-style:italic;color:rgba(255,255,255,.06);position:absolute;top:12px;right:16px;line-height:1}
+.problem-item h3{font-size:15px;font-weight:500;color:var(--accent-light);margin-bottom:10px;letter-spacing:.04em;font-family:var(--serif)}
+.problem-item p{font-size:12px;color:var(--light);line-height:1.9}
+.problem-quote{margin-top:48px;padding:36px 48px;border:1px solid rgba(255,255,255,.08);position:relative}
+.problem-quote::before{content:'"';font-family:var(--roman);font-size:120px;color:rgba(255,255,255,.04);position:absolute;top:-20px;left:12px;line-height:1}
+.problem-quote p{font-family:var(--serif);font-size:16px;color:rgba(250,248,243,.8);line-height:2.1;position:relative;z-index:1;font-weight:300}
+.problem-quote cite{display:block;font-size:11px;color:var(--light);margin-top:14px;letter-spacing:.15em;font-style:normal}
+
+/* ━━ AGITATE (A) ━━ */
+.agitate{background:var(--cream);padding:100px 0;text-align:center}
+.agitate .section-title{color:var(--dark);margin-bottom:32px}
+.agitate-body{max-width:580px;margin:0 auto}
+.agitate-body p{font-family:var(--serif);font-weight:300;font-size:15px;line-height:2.2;color:var(--muted);margin-bottom:20px}
+.agitate-body strong{color:var(--dark);font-weight:500}
+.agitate-divider{width:1px;height:60px;background:var(--border);margin:32px auto}
+
+/* ━━ BEFORE/AFTER ━━ */
+.cases{background:var(--warm);padding:100px 0}
+.cases .section-title{color:var(--dark)}
+.cases-desc{font-size:14px;color:var(--muted);line-height:2;max-width:560px;margin-bottom:56px}
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.case-item img{width:100%;height:auto;display:block}
+.case-footer{padding:14px 0 0;border-top:1px solid var(--border);margin-top:10px}
+.case-tag{font-family:var(--roman);font-size:10px;letter-spacing:.3em;color:var(--accent);margin-bottom:4px;display:block}
+.case-desc{font-size:12px;color:var(--muted);line-height:1.7}
+
+/* ━━ SOLUTION (S) ━━ */
+.solution{background:var(--cream);padding:100px 0}
+.solution-intro{max-width:640px;margin:0 auto 72px;text-align:center}
+.solution-intro .section-desc{font-size:14px;color:var(--muted);line-height:2;max-width:100%;margin:0 auto}
+.commitment-list{display:flex;flex-direction:column}
+.commitment-item{display:grid;grid-template-columns:64px 1fr 280px;border-bottom:1px solid var(--border);overflow:hidden;transition:background .3s}
+.commitment-item:first-child{border-top:1px solid var(--border)}
+.commitment-item:hover{background:var(--accent-pale)}
+.commitment-num{background:var(--charcoal);color:var(--cream);display:flex;align-items:center;justify-content:center;font-family:var(--roman);font-size:18px;font-weight:300;font-style:italic}
+.commitment-body{padding:28px 32px}
+.commitment-body h3{font-family:var(--serif);font-size:15px;font-weight:500;color:var(--dark);margin-bottom:8px}
+.commitment-body p{font-size:12px;color:var(--muted);line-height:2}
+.commitment-img{overflow:hidden}
+.commitment-img img{width:100%;height:100%;min-height:160px;object-fit:cover;transition:transform .6s}
+.commitment-item:hover .commitment-img img{transform:scale(1.05)}
+
+/* ━━ GALLERY (モデル) ━━ */
+.gallery{background:var(--charcoal);padding:100px 0}
+.gallery .section-title{color:var(--cream)}
+.gallery .section-label{color:var(--accent)}
+.gallery-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px}
+.gallery-header .section-desc{font-size:13px;color:var(--light);max-width:340px;line-height:1.9}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.gallery-item{overflow:hidden;aspect-ratio:3/4}
+.gallery-item.wide{aspect-ratio:3/2;grid-column:span 2}
+.gallery-item img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%);transition:transform .6s,filter .4s}
+.gallery-item:hover img{transform:scale(1.04);filter:grayscale(0%)}
+.gallery-footer{margin-top:32px;display:flex;justify-content:flex-end}
+.ig-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.2);color:var(--cream);padding:12px 24px;font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-decoration:none;transition:all .3s}
+.ig-btn:hover{background:rgba(255,255,255,.08)}
+
+/* ━━ FLOW ━━ */
+.flow{background:var(--accent-pale);padding:100px 0}
+.flow .section-title{color:var(--dark)}
+.flow-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px}
+.flow-item{background:var(--warm);padding:0 0 24px;position:relative}
+.flow-item::after{content:'→';position:absolute;right:-14px;top:80px;font-family:var(--roman);font-size:18px;color:var(--accent);z-index:1}
+.flow-item:last-child::after,.flow-item:nth-child(4)::after{display:none}
+.flow-img{width:100%;height:160px;object-fit:cover;display:block;margin-bottom:16px}
+.flow-step{font-family:var(--roman);font-size:10px;letter-spacing:.3em;color:var(--accent);margin-bottom:6px;display:block;padding:0 16px}
+.flow-item h3{font-family:var(--serif);font-size:13px;font-weight:500;color:var(--dark);margin-bottom:4px;padding:0 16px}
+.flow-item p{font-size:11px;color:var(--muted);line-height:1.8;padding:0 16px}
+
+/* ━━ OFFER ━━ */
+.offer{background:var(--charcoal);padding:100px 0;color:var(--cream)}
+.offer .section-title{color:var(--cream)}
+.offer .section-label{color:var(--accent)}
+.offer-intro{font-size:14px;color:var(--light);line-height:2;max-width:560px;margin-bottom:56px}
+.price-table{border:1px solid rgba(255,255,255,.1)}
+.price-row{display:grid;grid-template-columns:1fr auto;align-items:center;padding:24px 32px;border-bottom:1px solid rgba(255,255,255,.07);transition:background .3s}
+.price-row:last-child{border-bottom:none}
+.price-row:hover{background:rgba(255,255,255,.04)}
+.price-row.featured{background:rgba(184,149,106,.12)}
+.price-name{font-family:var(--serif);font-size:14px;font-weight:400;color:var(--cream);margin-bottom:4px}
+.price-badge{display:inline-block;background:var(--accent);color:#fff;font-size:9px;padding:2px 8px;letter-spacing:.1em;margin-left:8px;vertical-align:middle}
+.price-desc{font-size:12px;color:var(--light);line-height:1.8}
+.price-amount{font-family:var(--roman);font-size:22px;font-weight:300;color:var(--accent-light);white-space:nowrap;padding-left:28px;text-align:right}
+.price-amount small{font-size:10px;color:var(--light);display:block;margin-top:2px}
+.offer-note{margin-top:16px;font-size:12px;color:var(--light);line-height:2}
+
+/* ━━ PROFILE ━━ */
+.profile-section{background:var(--warm);padding:100px 0}
+.profile-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.profile-img-wrap{position:relative}
+.profile-img-wrap img{width:100%;height:580px;object-fit:cover;object-position:center top}
+.profile-badge{position:absolute;bottom:20px;right:20px;background:var(--charcoal);color:var(--cream);padding:16px 20px;text-align:right}
+.profile-badge .name{font-family:var(--roman);font-size:20px;font-weight:300;letter-spacing:.1em;font-style:italic}
+.profile-badge .title{font-size:9px;letter-spacing:.2em;color:var(--accent-light);margin-top:3px}
+.profile-achievements{display:flex;flex-direction:column;gap:12px;margin:28px 0;padding:24px;background:var(--accent-pale)}
+.achievement{display:flex;gap:14px;align-items:flex-start}
+.achievement-dot{width:6px;height:6px;background:var(--accent);flex-shrink:0;margin-top:7px;border-radius:50%}
+.achievement p{font-size:13px;color:var(--charcoal);line-height:1.7}
+.story-text{font-size:13px;color:var(--muted);line-height:2.1;margin-bottom:16px}
+.story-highlight{font-family:var(--serif);font-weight:400;font-size:16px;color:var(--dark);line-height:1.8;border-left:2px solid var(--accent);padding-left:18px;margin:24px 0}
+.sns-links{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+.sns-btn{display:inline-flex;align-items:center;gap:6px;padding:11px 18px;font-family:var(--sans);font-size:11px;letter-spacing:.15em;text-decoration:none;border:1px solid;transition:all .3s}
+.sns-btn.instagram{border-color:var(--charcoal);color:var(--charcoal)}
+.sns-btn.instagram:hover{background:var(--charcoal);color:#fff}
+.sns-btn.line{border-color:#06C755;color:#06C755}
+.sns-btn.line:hover{background:#06C755;color:#fff}
+.sns-btn.note{border-color:var(--accent);color:var(--accent)}
+.sns-btn.note:hover{background:var(--accent);color:#fff}
+
+/* ━━ VOICE ━━ */
+.voice{background:var(--cream);padding:100px 0}
+.voice .section-title{color:var(--dark)}
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.voice-card{background:#fff;border:1px solid var(--border);padding:32px 28px;position:relative;display:flex;flex-direction:column;gap:16px}
+.voice-card::before{content:'"\201C"';font-family:var(--roman);font-size:64px;line-height:1;color:var(--accent-light);position:absolute;top:16px;right:24px;font-weight:300}
+.voice-stars{display:flex;gap:3px}
+.voice-stars span{color:var(--accent);font-size:13px}
+.voice-headline{font-family:var(--serif);font-size:13px;font-weight:500;color:var(--dark);line-height:1.7;letter-spacing:.05em}
+.voice-body{font-size:12px;color:var(--muted);line-height:2;flex:1}
+.voice-footer{border-top:1px solid var(--border);padding-top:14px;display:flex;justify-content:space-between;align-items:center}
+.voice-name{font-size:12px;color:var(--charcoal);letter-spacing:.1em}
+.voice-attr{font-size:10px;color:var(--light);letter-spacing:.08em}
+.voice-featured{grid-column:span 2}
+.voice-total{text-align:center;margin-top:56px}
+.voice-total-num{font-family:var(--roman);font-size:64px;font-weight:300;font-style:italic;color:var(--dark);line-height:1}
+.voice-total-label{font-size:11px;letter-spacing:.2em;color:var(--accent);margin-top:4px}
+.voice-total-sub{font-size:12px;color:var(--muted);margin-top:12px;letter-spacing:.05em}
+@media(max-width:768px){.voice-grid{grid-template-columns:1fr}.voice-featured{grid-column:span 1}}
+
+/* ━━ GUARANTEE ━━ */
+.guarantee{background:var(--warm);padding:80px 0;text-align:center}
+.guarantee .section-title{color:var(--dark);margin-bottom:32px}
+.guarantee-box{max-width:480px;margin:0 auto;border:1px solid var(--border);padding:48px 40px}
+.guarantee-num{font-family:var(--roman);font-size:80px;font-weight:300;font-style:italic;color:var(--dark);line-height:1}
+.guarantee-unit{font-size:12px;letter-spacing:.2em;color:var(--accent);margin-bottom:16px;display:block}
+.guarantee-divider{width:40px;height:1px;background:var(--border);margin:16px auto}
+.guarantee-text{font-size:14px;color:var(--muted);line-height:2}
+
+/* ━━ CTA ━━ */
+.cta-section{background:var(--dark);padding:100px 0;text-align:center}
+.cta-section .section-label{color:var(--accent)}
+.cta-title{font-family:var(--serif);font-size:clamp(20px,2.8vw,32px);font-weight:400;color:var(--cream);line-height:1.7;margin-bottom:16px;max-width:560px;margin-left:auto;margin-right:auto}
+.cta-sub{font-size:13px;color:var(--light);letter-spacing:.12em;margin-bottom:48px}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-btn-line{display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;padding:20px 48px;font-family:var(--sans);font-size:13px;letter-spacing:.2em;text-decoration:none;transition:opacity .3s}
+.cta-btn-line:hover{opacity:.85}
+.cta-btn-ig{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.25);color:var(--cream);padding:20px 36px;font-family:var(--sans);font-size:13px;letter-spacing:.2em;text-decoration:none;transition:all .3s}
+.cta-btn-ig:hover{background:rgba(255,255,255,.08)}
+.cta-note{font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.1em;margin-top:24px}
+
+/* ━━ FOOTER ━━ */
+footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:40px;text-align:center}
+.footer-logo{font-family:var(--roman);font-size:28px;font-weight:300;font-style:italic;color:var(--accent-light);letter-spacing:.1em;margin-bottom:8px}
+.footer-sub{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.2em;margin-bottom:16px}
+.footer-links{display:flex;gap:24px;justify-content:center;margin-bottom:24px}
+.footer-links a{font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-decoration:none;transition:color .3s}
+.footer-links a:hover{color:var(--accent-light)}
+.footer-copy{font-size:10px;color:rgba(255,255,255,.2);letter-spacing:.1em}
+
+/* ━━ REVEAL ANIMATION ━━ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ━━ RESPONSIVE ━━ */
+@media(max-width:768px){
+  header{padding:14px 20px}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{height:50vw}
+  .hero-left::after{background:linear-gradient(to bottom,transparent 60%,var(--cream) 100%)}
+  .hero-right{padding:40px 24px}
+  .problem-grid{grid-template-columns:1fr}
+  .cases-grid{grid-template-columns:1fr}
+  .commitment-item{grid-template-columns:48px 1fr;grid-template-rows:auto auto}
+  .commitment-img{grid-column:1/-1;height:200px}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-item.wide{grid-column:span 1;aspect-ratio:3/4}
+  .flow-grid{grid-template-columns:repeat(2,1fr)}
+  .flow-item::after{display:none}
+  .profile-inner{grid-template-columns:1fr;gap:40px}
+  .profile-img-wrap img{height:400px}
+  .container{padding:0 20px}
+  .problem-quote{padding:28px 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="logo">soena.<span>— 華を添える —</span></a>
+  <div class="header-right">
+    <a href="https://www.instagram.com/tatsuro_gram" target="_blank" class="header-ig" aria-label="Instagram">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://lin.ee/9nMSZkCw" target="_blank" class="header-line">LINE で予約</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <img src="スタイリング.webp" alt="太田達朗 施術シーン">
+  </div>
+  <div class="hero-right">
+    <span class="hero-badge">HAIR SALON SOENA. RYOGOKU, TOKYO</span>
+    <div class="hero-en">soena.</div>
+    <div class="hero-ja">— 華を添える —</div>
+    <h1 class="hero-catch">
+      <em>乾かすだけで決まる。</em><br>
+      その一言が、<br>
+      あなたの朝を変える。
+    </h1>
+    <p class="hero-sub">骨格設計＋似合わせカットで、<br>あなただけの「ナチュラルな美しさ」を。<br>完全マンツーマン・1日3名限定。</p>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">18<span class="stat-unit" style="font-size:13px">年</span></div>
+        <div class="stat-label">美容師歴</div>
+      </div>
+      <div>
+        <div class="stat-num">15,000<span class="stat-unit">+</span></div>
+        <div class="stat-label">延べ担当数</div>
+      </div>
+      <div>
+        <div class="stat-num">80.9<span class="stat-unit">%</span></div>
+        <div class="stat-label">個人リピート率</div>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <a href="https://lin.ee/9nMSZkCw" target="_blank" class="btn-line">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.96 2 10.8c0 3.14 1.74 5.93 4.4 7.67L5.6 22l4.28-2.07c.68.18 1.39.27 2.12.27 5.52 0 10-3.96 10-8.8S17.52 2 12 2z"/></svg>
+        LINE で予約・相談
+      </a>
+      <a href="#profile" class="btn-outline">太田達朗について</a>
+    </div>
+  </div>
+</section>
+
+<!-- P: PROBLEM -->
+<section class="problem reveal">
+  <div class="container">
+    <span class="section-label">— PROBLEM —</span>
+    <h2 class="section-title">こんなお悩み、<br>ずっと解決されていませんか？</h2>
+    <p class="section-desc">「なんとなくしっくりこない」そのまま通い続けていませんか。あなたの悩みには、ちゃんと理由があります。</p>
+    <div class="problem-grid">
+      <div class="problem-item" data-num="01">
+        <div class="problem-num">01</div>
+        <h3>なんか、疲れて見える</h3>
+        <p>鏡を見るたびに「老けたかも」と感じる。写真を見るたびに、なんとなく印象が暗い気がする。</p>
+      </div>
+      <div class="problem-item" data-num="02">
+        <div class="problem-num">02</div>
+        <h3>朝のセットが上手くいかない</h3>
+        <p>美容室を出たときはきれいなのに、翌朝から再現できない。朝10分で決まる髪型が欲しい。</p>
+      </div>
+      <div class="problem-item" data-num="03">
+        <div class="problem-num">03</div>
+        <h3>ショートにしたいけど怖い</h3>
+        <p>「老けて見えそう」「失敗したら取り返せない」。変えたいけど、踏み出せない。</p>
+      </div>
+      <div class="problem-item" data-num="04">
+        <div class="problem-num">04</div>
+        <h3>広がり・パサつきが気になる</h3>
+        <p>ドライヤー後もまとまらない。年々扱いにくくなっている気がする。何が原因かわからない。</p>
+      </div>
+      <div class="problem-item" data-num="05">
+        <div class="problem-num">05</div>
+        <h3>自分に合うサロンが見つからない</h3>
+        <p>どこも同じことを書いていて違いがわからない。「雰囲気」と「値段」でしか選べていない。</p>
+      </div>
+      <div class="problem-item" data-num="06">
+        <div class="problem-num">06</div>
+        <h3>思いが伝わらない</h3>
+        <p>カウンセリングで上手く伝えられない。仕上がりが「なんか違う」になることが多い。</p>
+      </div>
+    </div>
+    <div class="problem-quote">
+      <p>多くのサロンは「何でもできます」というスタンス。<br>だからこそ、あなたの悩みに特化した提案ができない。<br>「うまく伝えられなかった」「雰囲気で選んだ」——<br>その繰り返しが、解決されない悩みを生んでいます。</p>
+      <cite>— soena. が考える、「解決されない悩み」の本質</cite>
+    </div>
+  </div>
+</section>
+
+<!-- A: AGITATE -->
+<section class="agitate reveal">
+  <div class="container">
+    <span class="section-label">— AGITATE —</span>
+    <h2 class="section-title">「なんとなく解決されなかった」<br>その悩みには、理由があります。</h2>
+    <div class="agitate-divider"></div>
+    <div class="agitate-body">
+      <p>忙しい毎日の中で、自分のことは後回しになりがち。</p>
+      <p>行くたびに「違う気がする」と思いながら、<br>同じサロンに通い続けている——</p>
+      <p><strong>「何センチ切りますか？」ではなく、<br>あなたの骨格に合った形を"設計"してくれる美容師。</strong></p>
+      <p>そんな人に、出会えていますか？</p>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section class="cases reveal">
+  <div class="container">
+    <span class="section-label">— BEFORE / AFTER —</span>
+    <h2 class="section-title">「形」が変わると、印象が変わる。</h2>
+    <p class="cases-desc">骨格・顔立ち・髪質・毛流れを診断した上で、あなたに「いちばん似合う形」を設計します。</p>
+    <div class="cases-grid">
+      <div class="case-item">
+        <img src="phonto_13.JPG" alt="Before After ショートへの変化">
+        <div class="case-footer">
+          <span class="case-tag">CASE 01</span>
+          <p class="case-desc">ショートボブ→骨格設計ショート。後頭部の丸みと首のラインが際立つ変化。</p>
+        </div>
+      </div>
+      <div class="case-item">
+        <img src="phonto_14.JPG" alt="Before After ボブからショートへ">
+        <div class="case-footer">
+          <span class="case-tag">CASE 02</span>
+          <p class="case-desc">ミディアムボブ→ショート。顔まわりがすっきりし、印象が一新。</p>
+        </div>
+      </div>
+      <div class="case-item">
+        <img src="phonto_22.JPG" alt="Before After ミディアムからショートへ">
+        <div class="case-footer">
+          <span class="case-tag">CASE 03</span>
+          <p class="case-desc">ミディアム→ショート。首が長く見える変化が劇的。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S: SOLUTION (5つのこだわり) -->
+<section class="solution reveal">
+  <div class="container">
+    <div class="solution-intro">
+      <span class="section-label">— SOLUTION —</span>
+      <h2 class="section-title">soena. の5つのこだわり</h2>
+      <p class="section-desc">「35歳以上の大人女性」のお悩みに向き合うために、soena.はやることとやらないことを明確にしています。</p>
+    </div>
+    <div class="commitment-list">
+      <div class="commitment-item">
+        <div class="commitment-num">01</div>
+        <div class="commitment-body">
+          <h3>あなたの気持ちに寄り添うパーソナルカウンセリング</h3>
+          <p>「なりたいイメージ」「今の悩み」「朝のスタイリング時間」を丁寧に伺います。実際に行う施術だけでなく「何をやらないか」まで明確にしてから施術に入ります。</p>
+        </div>
+        <div class="commitment-img">
+          <img src="カウンセリング②.webp" alt="パーソナルカウンセリング">
+        </div>
+      </div>
+      <div class="commitment-item">
+        <div class="commitment-num">02</div>
+        <div class="commitment-body">
+          <h3>骨格を綺麗に見せる「設計」としてのヘアデザイン</h3>
+          <p>顔まわりがすっきり見える、横顔がきれいに見える、後頭部の丸みが自然に出る——そんな見え方まで計算してデザインします。ドライカットの調整に時間をかけ、ミリ単位で確認しながら仕上げます。</p>
+        </div>
+        <div class="commitment-img">
+          <img src="スタイリング②.webp" alt="骨格設計カット">
+        </div>
+      </div>
+      <div class="commitment-item">
+        <div class="commitment-num">03</div>
+        <div class="commitment-body">
+          <h3>乾かすだけでまとまる「再現性」</h3>
+          <p>ブラシを一切使いません。ドライヤーでさっと乾かすだけで形が作れるように、骨格・髪質・毛流れに合わせて設計します。0〜45日快適に過ごせることを目標に。</p>
+        </div>
+        <div class="commitment-img">
+          <img src="ドライカット前髪.webp" alt="ドライカット">
+        </div>
+      </div>
+      <div class="commitment-item">
+        <div class="commitment-num">04</div>
+        <div class="commitment-body">
+          <h3>正直に、丁寧に、フラットな関係性で</h3>
+          <p>できること・できないことを曖昧にせず正直にお伝えします。「〜様」という接客ではなく、同じ目線でフラットに話せるプロの技術者でありたいと思っています。</p>
+        </div>
+        <div class="commitment-img">
+          <img src="カウンセリング③笑顔.webp" alt="フラットな接客">
+        </div>
+      </div>
+      <div class="commitment-item">
+        <div class="commitment-num">05</div>
+        <div class="commitment-body">
+          <h3>完全マンツーマン・1日3名限定</h3>
+          <p>あなたのためだけの時間を確保します。慌ただしい雰囲気の中での施術ではなく、ゆったりと時間が流れる空間で、あなたのパーソナルな悩みにじっくり向き合います。</p>
+        </div>
+        <div class="commitment-img">
+          <img src="仕上げ鏡.webp" alt="マンツーマン施術">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery reveal">
+  <div class="container">
+    <div class="gallery-header">
+      <div>
+        <span class="section-label">— WORKS —</span>
+        <h2 class="section-title">美意識と、デザインの世界観。</h2>
+      </div>
+      <p class="section-desc">ショートからロングまで、一人ひとりの骨格と髪質に合わせたデザインを。</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item wide">
+        <img src="sense9.webp" alt="ヘアスタイル作品">
+      </div>
+      <div class="gallery-item">
+        <img src="sense13.webp" alt="ヘアスタイル作品">
+      </div>
+      <div class="gallery-item">
+        <img src="sense11.webp" alt="ヘアスタイル作品">
+      </div>
+      <div class="gallery-item">
+        <img src="sense14.webp" alt="ヘアスタイル作品">
+      </div>
+      <div class="gallery-item wide">
+        <img src="sense②.webp" alt="ヘアスタイル作品">
+      </div>
+    </div>
+    <div class="gallery-footer">
+      <a href="https://www.instagram.com/tatsuro_gram" target="_blank" class="ig-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Instagram でもっと見る
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow reveal">
+  <div class="container">
+    <span class="section-label">— FLOW —</span>
+    <h2 class="section-title">はじめてのご来店の流れ</h2>
+    <div class="flow-grid">
+      <div class="flow-item">
+        <img src="来店.webp" alt="ご来店" class="flow-img">
+        <span class="flow-step">STEP 01</span>
+        <h3>ご来店</h3>
+        <p>完全予約制でお待ちしています。</p>
+      </div>
+      <div class="flow-item">
+        <img src="受付ご案内.webp" alt="受付・ご案内" class="flow-img">
+        <span class="flow-step">STEP 02</span>
+        <h3>笑顔でお出迎え</h3>
+        <p>リラックスしてお入りください。</p>
+      </div>
+      <div class="flow-item">
+        <img src="カウンセリング②.webp" alt="カウンセリング" class="flow-img">
+        <span class="flow-step">STEP 03</span>
+        <h3>パーソナルカウンセリング</h3>
+        <p>なりたいイメージや悩みを丁寧に伺います。</p>
+      </div>
+      <div class="flow-item">
+        <img src="毛髪診断.webp" alt="毛髪診断" class="flow-img">
+        <span class="flow-step">STEP 04</span>
+        <h3>骨格・毛髪診断</h3>
+        <p>骨格・髪質・毛流れを確認します。</p>
+      </div>
+      <div class="flow-item">
+        <img src="ウエットカット.webp" alt="施術" class="flow-img">
+        <span class="flow-step">STEP 05</span>
+        <h3>施術スタート</h3>
+        <p>丁寧に、時間をかけて仕上げます。</p>
+      </div>
+      <div class="flow-item">
+        <img src="ドライカット前髪.webp" alt="ドライカット" class="flow-img">
+        <span class="flow-step">STEP 06</span>
+        <h3>ドライカット調整</h3>
+        <p>乾いた状態でミリ単位で確認しながら仕上げます。</p>
+      </div>
+      <div class="flow-item">
+        <img src="仕上げ鏡.webp" alt="仕上がり確認" class="flow-img">
+        <span class="flow-step">STEP 07</span>
+        <h3>仕上がり確認</h3>
+        <p>後ろ姿も手鏡でしっかり確認します。</p>
+      </div>
+      <div class="flow-item">
+        <img src="仕上がり笑顔.webp" alt="お見送り" class="flow-img">
+        <span class="flow-step">STEP 08</span>
+        <h3>笑顔でお見送り</h3>
+        <p>ホームケアのアドバイスもお伝えします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer reveal">
+  <div class="container">
+    <span class="section-label">— MENU —</span>
+    <h2 class="section-title">メニュー・料金</h2>
+    <p class="offer-intro">単品メニューは設けていません。あなたの悩みに合わせた複合メニューをご提案します。「骨格設計」をベースに、カラー・パーマ・ヘッドスパを組み合わせることで、最大の効果をお届けします。</p>
+    <div class="price-table">
+      <div class="price-row featured">
+        <div>
+          <div class="price-name">骨格設計＋似合わせカット &amp; ダメージレスカラー<span class="price-badge">人気 No.1</span></div>
+          <div class="price-desc">施術時間 約2時間30分 / 乾かすだけでまとまるカット＋肌を明るく見せるカラー</div>
+        </div>
+        <div class="price-amount">¥20,000<small>税込</small></div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="price-name">骨格設計カット &amp; 頭身浴ヘッドスパ</div>
+          <div class="price-desc">施術時間 約2時間 / カット＋本格スキャルプケア</div>
+        </div>
+        <div class="price-amount">¥16,000<small>税込</small></div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="price-name">骨格設計＋似合わせカット &amp; 乾かしただけで決まるパーマ</div>
+          <div class="price-desc">施術時間 約2時間30分 / スタイリング不要のパーマスタイル</div>
+        </div>
+        <div class="price-amount">¥22,000<small>税込</small></div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="price-name">骨格設計＋似合わせカット &amp; ナチュラル縮毛矯正</div>
+          <div class="price-desc">施術時間 約3時間30分 / 広がり・うねりの根本解決。ダメージ削減トリートメント込み</div>
+        </div>
+        <div class="price-amount">¥35,000<small>税込</small></div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="price-name">骨格設計＋似合わせカット &amp; ハイライトデザインカラー</div>
+          <div class="price-desc">施術時間 約3時間30分 / ダメージ削減トリートメント込み</div>
+        </div>
+        <div class="price-amount">¥35,000<small>税込</small></div>
+      </div>
+    </div>
+    <p class="offer-note">※全メニューにダメージ削減トリートメントが含まれます。ロング料金なし。<br>詳細・その他メニューはLINEにてお気軽にお問い合わせください。</p>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section class="profile-section reveal" id="profile">
+  <div class="container">
+    <div class="profile-inner">
+      <div class="profile-img-wrap">
+        <img src="プロフィール.webp" alt="太田達朗">
+        <div class="profile-badge">
+          <div class="name">Tatsuro Ota</div>
+          <div class="title">soena. 代表 / スタイリスト</div>
+        </div>
+      </div>
+      <div>
+        <span class="section-label">— PROFILE —</span>
+        <h2 class="section-title">太田達朗について</h2>
+        <div class="profile-achievements">
+          <div class="achievement">
+            <div class="achievement-dot"></div>
+            <p>美容師歴 18年 / 元美容専門学校教員（3年）</p>
+          </div>
+          <div class="achievement">
+            <div class="achievement-dot"></div>
+            <p>延べ担当数 15,000名以上 / 月間指名数 250名</p>
+          </div>
+          <div class="achievement">
+            <div class="achievement-dot"></div>
+            <p>個人リピート率 80.9% / Google口コミ ★5.0（193件）</p>
+          </div>
+          <div class="achievement">
+            <div class="achievement-dot"></div>
+            <p>前職：都内サロン 統括マネージャー・社内技術講師</p>
+          </div>
+        </div>
+        <p class="story-text">実は私自身、「誰よりも髪を切ることが嫌な学生」でした。髪が硬く広がりやすく、短くするとツンツンしてしまう髪質がコンプレックスで、カットのたびに「明日学校に行くのが憂鬱」と感じていました。</p>
+        <div class="story-highlight">「本当に自分がほしいものに気づいてほしかった」——<br>だから、私が自分の出会いたかった美容師になることを決めました。</div>
+        <p class="story-text">会社の看板を下ろして、一人の美容師になったとき、自分にはどれ程の力があるのか？純粋にチャレンジしたいと思いました。目の前のお客様を心から幸せにしたい——その一心で独立を決意しました。</p>
+        <div class="sns-links">
+          <a href="https://www.instagram.com/tatsuro_gram" target="_blank" class="sns-btn instagram">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="https://lin.ee/9nMSZkCw" target="_blank" class="sns-btn line">LINE で予約</a>
+          <a href="https://note.com/vivid_viola4222" target="_blank" class="sns-btn note">note を読む</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="voice reveal">
+  <div class="container">
+    <span class="section-label">— VOICE —</span>
+    <h2 class="section-title">お客様の声</h2>
+
+    <div class="voice-grid">
+
+      <!-- Card 1: みさん（featured） -->
+      <div class="voice-card voice-featured">
+        <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="voice-headline">マイナス5歳、やっぱりお任せして良かった</p>
+        <p class="voice-body">年齢と共に扱いが難しくなった私の髪ですが、似合う・収まる・綺麗に見える、やっぱりお任せして良かったと感じています。骨格カットと似合わせカラーで、骨格・色ツヤ補正でフレッシュな印象に仕上げてくださり、マイナス5歳若返った気分です♪　技術だけでなく、気遣いにも感謝しています。また次回を楽しみにしています！</p>
+        <div class="voice-footer">
+          <span class="voice-name">みさん</span>
+          <span class="voice-attr">女性 / 40代 / 会社員</span>
+        </div>
+      </div>
+
+      <!-- Card 2: まゆさん -->
+      <div class="voice-card">
+        <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="voice-headline">自分の髪の毛を好きになれました</p>
+        <p class="voice-body">くせ毛の私が冬はストレート、湿度が上がる春から夏終わりはくせ毛を活かすというサイクルを見つけてくださったのは担当スタイリストさんです。カットだけでこんなに髪が変わるなんて、本当に驚いています。</p>
+        <div class="voice-footer">
+          <span class="voice-name">まゆさん</span>
+          <span class="voice-attr">女性 / 40代 / 自営業</span>
+        </div>
+      </div>
+
+      <!-- Card 3: くにちゃんさん（featured） -->
+      <div class="voice-card voice-featured">
+        <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="voice-headline">遠方からでも、また行きたいと思えるサロン</p>
+        <p class="voice-body">家族に教えてもらい初めて伺いました。カットだけで随分髪質も印象も変わり驚きました。一つ一つ充分説明してくださり安心して施術を受けられました。最後に毎日のセットを教えていただきましたが、すごく簡単に整えられ不器用な私にもできそうです。真摯に向き合っていただき嬉しかったです。遠方からですが是非また行きたいと思います。</p>
+        <div class="voice-footer">
+          <span class="voice-name">くにちゃんさん</span>
+          <span class="voice-attr">女性 / 60代 / 自営業</span>
+        </div>
+      </div>
+
+      <!-- Card 4: ひろみちゃんさん -->
+      <div class="voice-card">
+        <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="voice-headline">「ショートは無理」が覆りました</p>
+        <p class="voice-body">髪が多くボリュームが出てしまう・硬くてはねる、という理由でショートは無理だと思っていました。それが…ボリュームも出ないし、はねもしないで纏まったままなのです。2年間、毎回似合うようにカットしてくださり、本当に嬉しいです。</p>
+        <div class="voice-footer">
+          <span class="voice-name">ひろみちゃんさん</span>
+          <span class="voice-attr">女性 / 50代</span>
+        </div>
+      </div>
+
+      <!-- Card 5: しょうこさん -->
+      <div class="voice-card">
+        <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="voice-headline">扱いやすさが全然違う、技術力の高さを感じました</p>
+        <p class="voice-body">右は内巻き、左は外ハネになる悩みを相談したところ、原因を丁寧に説明してくださり、左右でバランスを調整したカットをしていただきました。仕上がりも自然で、自分で乾かしただけでもまとまりやすくなりました。</p>
+        <div class="voice-footer">
+          <span class="voice-name">しょうこさん</span>
+          <span class="voice-attr">女性 / 30代前半 / 会社員</span>
+        </div>
+      </div>
+
+      <!-- Card 6: そらさん -->
+      <div class="voice-card">
+        <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="voice-headline">技術力・提案力・コミュニケーション力、全て揃った担当さん</p>
+        <p class="voice-body">初来店でしたが髪質をお伝えしてほぼお任せで仕上げていただきました。カウンセリングも丁寧で、カット中も理論や目指している方向性など髪についていろいろ教えていただいたので、安心してお任せできました。</p>
+        <div class="voice-footer">
+          <span class="voice-name">そらさん</span>
+          <span class="voice-attr">女性 / 40代 / 会社員</span>
+        </div>
+      </div>
+
+      <!-- Card 7: pinchanさん（featured） -->
+      <div class="voice-card voice-featured">
+        <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="voice-headline">乾かすだけで、それなりになってしまう</p>
+        <p class="voice-body">いつもほぼお任せで切って頂くのですが、毎回大満足の仕上がりです。カットの技術がすごいので、自宅でもただ乾かすだけでそれなりになってしまいます。今回も長さはあまり変えないのに雰囲気が変わって嬉しかったです。お人柄も素晴らしく、尊敬できる美容師さんです。これからもずっとよろしくお願いいたします。</p>
+        <div class="voice-footer">
+          <span class="voice-name">pinchanさん</span>
+          <span class="voice-attr">女性 / 40代</span>
+        </div>
+      </div>
+
+      <!-- Card 8: みくさん -->
+      <div class="voice-card">
+        <div class="voice-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="voice-headline">なりたいイメージを伝えると、自分に合った最適な髪型を提案してくれる</p>
+        <p class="voice-body">髪質的に暗・重くなりがちなところ、軽く柔らかい印象に変えてくれるところがお気に入りです。毎回安心して全てお任せでき大変助かっています。</p>
+        <div class="voice-footer">
+          <span class="voice-name">みくさん</span>
+          <span class="voice-attr">女性 / 20代後半 / 会社員</span>
+        </div>
+      </div>
+
+    </div><!-- /voice-grid -->
+
+    <!-- 総合評価 -->
+    <div class="voice-total reveal">
+      <div class="voice-total-num">5.0</div>
+      <div class="voice-total-label">OVERALL RATING</div>
+      <div class="voice-total-sub">ホットペッパービューティー 総合評価 ★5.0（口コミ多数）</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee reveal">
+  <div class="container">
+    <span class="section-label" style="display:block;text-align:center">— GUARANTEE —</span>
+    <h2 class="section-title" style="text-align:center">安心の技術保証</h2>
+    <div class="guarantee-box">
+      <div class="guarantee-num">10</div>
+      <span class="guarantee-unit">DAYS GUARANTEE</span>
+      <div class="guarantee-divider"></div>
+      <p class="guarantee-text">施術日から10日以内であれば、<br>どんな些細なことでも無料でお直しします。<br><br>初めてのご来店でも、安心してお任せください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section reveal" id="contact">
+  <div class="container">
+    <span class="section-label">— CONTACT —</span>
+    <h2 class="cta-title">「こんな人に会ってみたい」<br>と思っていただけたなら。</h2>
+    <p class="cta-sub">完全予約制 / マンツーマン / 1日3名限定 / 2026年4月 両国オープン予定</p>
+    <div class="cta-btns">
+      <a href="https://lin.ee/9nMSZkCw" target="_blank" class="cta-btn-line">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.96 2 10.8c0 3.14 1.74 5.93 4.4 7.67L5.6 22l4.28-2.07c.68.18 1.39.27 2.12.27 5.52 0 10-3.96 10-8.8S17.52 2 12 2z"/></svg>
+        LINE で予約・ご相談する
+      </a>
+      <a href="https://www.instagram.com/tatsuro_gram" target="_blank" class="cta-btn-ig">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Instagram を見る
+      </a>
+    </div>
+    <p class="cta-note">ご予約・ご相談はLINEにて承っております</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">soena.</div>
+  <div class="footer-sub">35歳以上の大人女性のための骨格設計専門サロン</div>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/tatsuro_gram" target="_blank">Instagram</a>
+    <a href="https://lin.ee/9nMSZkCw" target="_blank">LINE</a>
+    <a href="https://note.com/vivid_viola4222" target="_blank">note</a>
+  </div>
+  <div class="footer-copy">© 2026 soena. All rights reserved.</div>
+</footer>
+
+<script>
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {threshold: 0.1});
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
